@@ -1,10 +1,10 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
-import heroImage from "@/assets/hero-business.jpg";
+import { ShoppingBag, ArrowRight } from "lucide-react";
+import heroImage from "@/assets/marketplace-hero.jpg";
 
 const Hero = () => {
-  const scrollToContact = () => {
-    const element = document.getElementById("contact");
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
     }
@@ -16,35 +16,35 @@ const Hero = () => {
       <div className="absolute inset-0 z-0">
         <img
           src={heroImage}
-          alt="Modern business office"
+          alt="Marketplace products"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/85 to-background/70" />
+        <div className="absolute inset-0 bg-gradient-to-br from-background/95 via-background/90 to-background/85" />
       </div>
 
       {/* Content */}
       <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-3xl animate-fade-in">
+        <div className="max-w-3xl animate-fade-in text-center mx-auto">
+          <div className="flex items-center justify-center mb-6">
+            <ShoppingBag className="w-16 h-16 text-primary" />
+          </div>
           <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-            Transform Your Business{" "}
+            Your Everything{" "}
             <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-              Into Reality
+              Marketplace
             </span>
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 leading-relaxed">
-            We deliver innovative solutions that drive growth and success. Partner with us
-            to unlock your business's full potential.
+            From fresh vegetables to trendy fashion, quality shoes to cutting-edge electronics.
+            Discover everything you need in one place.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4">
-            <Button variant="hero" size="lg" onClick={scrollToContact} className="group">
-              Get Started
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button variant="hero" size="lg" onClick={() => scrollToSection("categories")} className="group">
+              Shop Now
               <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={20} />
             </Button>
-            <Button variant="outline" size="lg" onClick={() => {
-              const element = document.getElementById("services");
-              if (element) element.scrollIntoView({ behavior: "smooth" });
-            }}>
-              Learn More
+            <Button variant="outline" size="lg" onClick={() => scrollToSection("featured")}>
+              View Featured
             </Button>
           </div>
         </div>

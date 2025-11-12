@@ -19,7 +19,7 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <span className="text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-              YourBrand
+              MarketPlace
             </span>
           </div>
 
@@ -32,16 +32,16 @@ const Navigation = () => {
               Home
             </button>
             <button
-              onClick={() => scrollToSection("services")}
+              onClick={() => scrollToSection("categories")}
               className="text-foreground hover:text-accent transition-colors"
             >
-              Services
+              Categories
             </button>
             <button
-              onClick={() => scrollToSection("about")}
+              onClick={() => scrollToSection("featured")}
               className="text-foreground hover:text-accent transition-colors"
             >
-              About
+              Featured
             </button>
             <button
               onClick={() => scrollToSection("contact")}
@@ -49,8 +49,8 @@ const Navigation = () => {
             >
               Contact
             </button>
-            <Button variant="hero" onClick={() => scrollToSection("contact")}>
-              Get Started
+            <Button variant="hero" onClick={() => scrollToSection("categories")}>
+              Shop Now
             </Button>
           </div>
 
@@ -73,16 +73,16 @@ const Navigation = () => {
               Home
             </button>
             <button
-              onClick={() => scrollToSection("services")}
+              onClick={() => scrollToSection("categories")}
               className="block w-full text-left px-4 py-2 text-foreground hover:text-accent hover:bg-muted rounded-md transition-colors"
             >
-              Services
+              Categories
             </button>
             <button
-              onClick={() => scrollToSection("about")}
+              onClick={() => scrollToSection("featured")}
               className="block w-full text-left px-4 py-2 text-foreground hover:text-accent hover:bg-muted rounded-md transition-colors"
             >
-              About
+              Featured
             </button>
             <button
               onClick={() => scrollToSection("contact")}
@@ -91,8 +91,8 @@ const Navigation = () => {
               Contact
             </button>
             <div className="px-4 pt-2">
-              <Button variant="hero" className="w-full" onClick={() => scrollToSection("contact")}>
-                Get Started
+              <Button variant="hero" className="w-full" onClick={() => scrollToSection("categories")}>
+                Shop Now
               </Button>
             </div>
           </div>
