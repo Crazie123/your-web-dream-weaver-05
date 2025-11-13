@@ -1,4 +1,4 @@
-import { Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
+import { Facebook, Twitter, Linkedin, Instagram, Phone, Mail } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -9,10 +9,10 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           <div>
             <h3 className="text-xl font-bold mb-4 bg-gradient-to-r from-primary-foreground to-accent bg-clip-text text-transparent">
-              YourBrand
+              MarketPlace
             </h3>
             <p className="text-primary-foreground/80 leading-relaxed">
-              Transforming businesses through innovation and excellence since 2009.
+              Your one-stop shop for vegetables, clothes, shoes, and electronics.
             </p>
           </div>
 
@@ -43,12 +43,26 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="font-semibold mb-4">Services</h4>
-            <ul className="space-y-2 text-primary-foreground/80">
-              <li>Consulting</li>
-              <li>Strategy</li>
-              <li>Implementation</li>
-              <li>Support</li>
+            <h4 className="font-semibold mb-4">Contact Us</h4>
+            <ul className="space-y-3">
+              <li>
+                <a 
+                  href="tel:0792014272" 
+                  className="flex items-center gap-2 text-primary-foreground/80 hover:text-accent transition-colors"
+                >
+                  <Phone size={18} />
+                  <span>0792014272</span>
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="mailto:crazyjoker2@gmail.com" 
+                  className="flex items-center gap-2 text-primary-foreground/80 hover:text-accent transition-colors"
+                >
+                  <Mail size={18} />
+                  <span>crazyjoker2@gmail.com</span>
+                </a>
+              </li>
             </ul>
           </div>
 
@@ -84,7 +98,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-primary-foreground/20 pt-8 text-center text-primary-foreground/60">
-          <p>&copy; {currentYear} YourBrand. All rights reserved.</p>
+          <p>&copy; {currentYear} MarketPlace. All rights reserved.</p>
         </div>
       </div>
     </footer>
