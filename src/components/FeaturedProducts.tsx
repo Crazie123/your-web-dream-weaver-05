@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Card, CardContent } from "@/components/ui/card";
 import { Star, ShoppingCart } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -92,11 +93,11 @@ const FeaturedProducts = () => {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {products.map((product, index) => (
-            <Card
-              key={product.id}
-              className="group cursor-pointer overflow-hidden hover:shadow-xl transition-all duration-300 animate-fade-in-up"
-              style={{ animationDelay: `${index * 50}ms` }}
-            >
+            <Link key={product.id} to={`/product/${product.id}`}>
+              <Card
+                className="group cursor-pointer overflow-hidden hover:shadow-xl transition-all duration-300 animate-fade-in-up"
+                style={{ animationDelay: `${index * 50}ms` }}
+              >
               <div className="relative h-64 overflow-hidden">
                 <img
                   src={product.image}
@@ -139,6 +140,7 @@ const FeaturedProducts = () => {
                 </div>
               </CardContent>
             </Card>
+            </Link>
           ))}
         </div>
       </div>
